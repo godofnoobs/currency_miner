@@ -58,9 +58,13 @@ class Miner{
             console.log('YEAR: ', year);
             console.log('FIRST_RATE', yearResult[0].rate_USD_BYN,
                 'LAST_RATE', yearResult[yearResult.length - 1].rate_USD_BYN);
-            result.concat(yearResult);
+            yearResult.forEach((it) => { result.push(it); })
         };
         return result;
+    }
+    
+    destroy() {
+        this.reqFactory = null;
     }
 }
 

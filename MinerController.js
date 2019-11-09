@@ -1,4 +1,5 @@
 const Miner = require('./Miner');
+const CSVSaver = require('./CSVSaver');
 
 const defaultOptions = {
     // years of start/end currency mining
@@ -28,16 +29,19 @@ class MinerController {
     constructor(options = defaultOptions) {
         this.options = options;
         this.miner = new Miner();
-        this.mine();
+        this.saver = new CSVSaver();
+        this.doSomeShit();
     }
     
-    async mine() {
-        await this.miner.mineAll();
-        
+    async doSomeShit() {
+        const currency = await this.miner.mineAll();
+        this.saver.saveCSV(currency);
     }
     
     destroy() {
-        this.reqFactory = null;
+        this.miner.destroy();
+        this.miner = null;
+        this.saver = null;
     }
 }
 
