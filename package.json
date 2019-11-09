@@ -1,0 +1,22 @@
+{
+  "name": "currency_miner",
+  "version": "1.0.0",
+  "description": "nbrb_currency_exchange_miner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/godofnoobs/currency_miner.git"
+  },
+  "author": "godofnoobs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/godofnoobs/currency_miner/issues"
+  },
+  "homepage": "https://github.com/godofnoobs/currency_miner#readme",
+  "dependencies": {
+    "axios": "^0.19.0"
+  }
+}
