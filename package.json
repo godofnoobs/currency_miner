@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/godofnoobs/currency_miner#readme",
   "dependencies": {
-    "axios": "^0.19.0"
+    "axios": "^0.21.1"
   }
 }
